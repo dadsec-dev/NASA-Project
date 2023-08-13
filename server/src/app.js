@@ -4,8 +4,10 @@ const cors = require('cors');
 const planetsRouter = require('./routes/planets/planets.router');
 const app = express();
 
+//add cors to middleware chain for all request
+//setup cors on middleware to only accepts requests from client origin
 app.use(cors({
-    origin: 'http://localhost:3000/'
+    origin: 'http://localhost:3000'
 }));
 
 
